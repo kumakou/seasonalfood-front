@@ -5,12 +5,17 @@ import RestaurantDetailPage from "./RestaurantDetailPage"
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/restaurants",
-    children: [{ path: ":id", element: <RestaurantDetailPage /> }],
+    basename: process.env.PUBLIC_URL,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/restaurants",
+        children: [{ path: ":id", element: <RestaurantDetailPage /> }],
+      },
+    ],
   },
 ])
 
