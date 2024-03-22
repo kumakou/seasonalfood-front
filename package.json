@@ -30,6 +30,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://kumakou.github.io/seasonalfood-front",
   "browserslist": {
     "production": [
       ">0.2%",
